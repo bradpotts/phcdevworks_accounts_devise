@@ -21,7 +21,7 @@
   <!-- Rails Security Tags -->
 
   <!-- CSS Styles -->
-  <%= stylesheet_link_tag 'phcdevworks_accounts/application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= stylesheet_link_tag 'phcdevworks_accounts/application', media: 'all' %>
   <!-- CSS Styles -->
 
   <!-- Font -->
@@ -55,7 +55,7 @@
     <!-- Page Content -->
 
     <!-- Footer Content -->
-    <div id="footer" class="footer mb-4">
+    <div id="footer" class="row footer mb-4">
       <%= render 'layouts/phcdevworks_accounts/components/backend/footer/footer' %>
     </div>
     <!-- Footer Content -->
@@ -64,15 +64,15 @@
   <!-- Page Container -->
 
   <!-- JavaScript -->
-  <%= javascript_include_tag "phcdevworks_accounts/application", 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag "phcdevworks_accounts/application", "data-turbolinks-track": "reload" %>
   <!-- JavaScript -->
 
   <!-- JavaScript Loader -->
-  <script>
-    $(document).ready(function() {
-      App.init();
-    });
-  </script>
+	<script>
+		$(document).ready(function() {
+			App.init();
+		});
+	</script>
   <!-- JavaScript Loader -->
 
 </body>

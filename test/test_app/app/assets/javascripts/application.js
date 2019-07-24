@@ -1,2 +1,2 @@
-// Import Bootstrap
-// plugins/bootstrap/bootstrap.bundle.js
+// Load Admin Theme
+//= require phcthemes_admin_panel_pack_coloradmin

@@ -2,7 +2,7 @@ $:.push File.expand_path("lib", __dir__)
 require "phcdevworks_accounts/version"
 
 Gem::Specification.new do |spec|
-  
+
   spec.name        = "phcdevworks_accounts"
   spec.version     = PhcdevworksAccounts::VERSION
   spec.authors     = ["PHCDevworks"]
@@ -21,20 +21,19 @@ Gem::Specification.new do |spec|
   #"public gem pushes."
   #end
 
-  spec.files = Dir["{app,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
+  spec.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
 
   # Main Dependencies
-  spec.add_dependency "rails", "~> 6.0.0.rc1"
+  spec.add_dependency "rails", "~> 6.0.0.rc2"
 
   # Theme Dependencies
-  spec.add_dependency 'sassc-rails', '~> 2.1'
-  spec.add_dependency "phcthemes_admin_panel_pack", "~> 0.8.0"
-  spec.add_dependency "phcthemes_web_theme_pack", "~> 0.4.0"
-
+  spec.add_dependency "phcthemes_admin_panel_pack", "~> 0.24.0"
+  spec.add_dependency "phcthemes_web_theme_pack", "~> 0.13.0"
+  
   # Helper Dependencies
-  spec.add_dependency "phcdevworks_active_menus", "~> 0.8.0"
-  spec.add_dependency "phcdevworks_notifications", "~> 0.8.0"
-  spec.add_dependency "phcdevworks_titleseo", "~> 0.8.0"
+  spec.add_dependency "phcdevworks_active_menus", "~> 0.28.0"
+  spec.add_dependency "phcdevworks_notifications", "~> 0.30.0"
+  spec.add_dependency "phcdevworks_titleseo", "~> 0.32.0"
 
   # Frontend Dependencies
   spec.add_dependency "friendly_id", "~> 5.2"
