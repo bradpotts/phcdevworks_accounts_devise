@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    phcdevworks_accounts (0.3.0)
+    phcdevworks_accounts (0.4.0)
       activemerchant (~> 1.93)
       devise (~> 4.6)
       friendly_id (~> 5.2)
