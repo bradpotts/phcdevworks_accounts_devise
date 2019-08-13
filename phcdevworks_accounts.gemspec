@@ -27,14 +27,14 @@ Gem::Specification.new do |spec|
   spec.add_dependency "rails", "~> 6.0.0.rc2"
 
   # Theme Dependencies
-  spec.add_dependency "phcthemes_admin_panel_pack", "~> 0.29.0"
+  spec.add_dependency "phcthemes_admin_panel_pack", "~> 0.31.0"
   spec.add_dependency "phcthemes_web_theme_pack", "~> 0.15.0"
 
   # Helper Dependencies
-  # spec.add_dependency "phcdevworks_core", "~> 0.3.0"
-  spec.add_dependency "phcdevworks_active_menus", "~> 0.32.0"
-  spec.add_dependency "phcdevworks_notifications", "~> 0.34.0"
-  spec.add_dependency "phcdevworks_titleseo", "~> 0.36.0"
+  # spec.add_dependency "phcdevworks_core", "~> 0.5.0"
+  spec.add_dependency "phcdevworks_active_menus", "~> 0.33.0"
+  spec.add_dependency "phcdevworks_notifications", "~> 0.35.0"
+  spec.add_dependency "phcdevworks_titleseo", "~> 0.37.0"
 
   # Frontend Dependencies
   spec.add_dependency "friendly_id", "~> 5.2"
