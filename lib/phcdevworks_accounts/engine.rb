@@ -10,6 +10,11 @@ module PhcdevworksAccounts
     require "phcdevworks_notifications"
     require "phcdevworks_titleseo"
 
+    # Load Upload Dependencies
+    require "aws-sdk-s3"
+    require "google-cloud-storage"
+    require "mini_magick"
+
     # Frontend Dependencies
     require 'gravtastic'
     require 'friendly_id'
