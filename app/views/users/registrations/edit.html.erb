@@ -1,19 +1,22 @@
-<!-- Title System -->
+<!-- PHCTitleSEO Title Variables -->
 <% phc_title resource_name.to_s.humanize + " Account Information" %>
 <% phc_title_tagline "Edit Your " + resource_name.to_s.humanize + " Account Information" %>
 <% phc_breadcrumb_one link_to "Home", main_app.root_path %>
 <% phc_breadcrumb_two link_to "Accounts Dashboard", phcdevworks_accounts.dashboard_path %>
 <% phc_breadcrumb_three yield(:phc_title_tagline) %>
-<!-- Title System -->
+<!-- PHCTitleSEO Title Variables -->
 
-<!-- BreakCrumbs & Header -->
+<!-- Page Bradcrumbs -->
 <ol class="breadcrumb pull-right">
 	<li class="breadcrumb-item"><%= yield(:phc_breadcrumb_one) %></li>
 	<li class="breadcrumb-item"><%= yield(:phc_breadcrumb_two) %></li>
 	<li class="breadcrumb-item active"><%= yield(:phc_breadcrumb_three) %></li>
 </ol>
+<!-- Page Bradcrumbs -->
+
+<!-- Page Header -->
 <h2 class="page-header"><%= yield(:phc_title) %></h2>
-<!-- BreakCrumbs & Header -->
+<!-- Page Header -->
 
 <!-- Page Content -->
 <div class="row">
@@ -24,13 +27,6 @@
 
 			<!-- Panel - Heading -->
 			<div class="panel-heading">
-				<!-- Panel - Actions -->
-				<div class="panel-heading-btn">
-					<a href="#" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
-					<a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-success" data-click="panel-reload"><i class="fa fa-redo"></i></a>
-					<a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
-				</div>
-				<!-- Panel - Actions -->
 				<h4 class="panel-title"><%= yield(:phc_title) %></h4>
 			</div>
 			<!-- Panel - Heading -->
@@ -38,9 +34,12 @@
 			<!-- Panel - Body -->
 			<div class="panel-body">
 
+				<!-- Edit Form -->
 				<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |form| %>
 
+					<!-- Devise Error Message -->
 					<%= devise_error_messages! %>
+					<!-- Devise Error Message -->
 
 					<div class="form-group">
 						<%= form.label :firstname, "First Name" %>
@@ -67,7 +66,7 @@
 					<% end %>
 
 					<div class="form-group">
-						<%= form.label :password, "New Password" %> <i>(leave blank if you don't want to change it)</i>
+						<%= form.label :password, "New Password" %> <i>(leave blank if you don"t want to change it)</i>
 						<%= form.password_field :password, class: "form-control", placeholder: "New Password", autocomplete: "off" %>
 					</div>
 
@@ -89,6 +88,7 @@
 					</div>
 
 				<% end %>
+				<!-- Edit Form -->
 
 			</div>
 			<!-- Panel - Body -->
