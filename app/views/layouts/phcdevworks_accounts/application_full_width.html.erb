@@ -21,18 +21,14 @@
   <!-- Rails Security Tags -->
 
   <!-- CSS Styles -->
-  <%= stylesheet_link_tag 'phcdevworks_accounts/application', media: 'all' %>
+  <%= stylesheet_link_tag "phcdevworks_accounts/application", media: "all", "data-turbolinks-track": "reload" %>
   <!-- CSS Styles -->
-
-  <!-- Font -->
-  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400%7CRaleway:300,400,500,600,700%7CLato:300,400,400italic,600,700"/>
-  <!-- Font -->
 
 </head>
 <body>
 
   <!-- Page Container -->
-  <div id="page-container" class="fade page-sidebar-fixed page-header-fixed">
+  <div id="page-container" class="page-container fade page-sidebar-fixed page-header-fixed">
 
     <!-- Page Header -->
     <div id="header" class="header navbar-default">
@@ -48,14 +44,14 @@
     <!-- Page Sidebar -->
 
     <!-- Page Content -->
-    <div id="content" class="content">
+    <div id="content" class="content content-full-width">
       <%= render 'phcdevworks_notifications/bootstrap/notifications' %>
       <%= yield %>
     </div>
     <!-- Page Content -->
 
     <!-- Footer Content -->
-    <div id="footer" class="row footer mb-4">
+    <div id="footer" class="footer mb-4 d-flex">
       <%= render 'layouts/phcdevworks_accounts/components/backend/footer/footer' %>
     </div>
     <!-- Footer Content -->
