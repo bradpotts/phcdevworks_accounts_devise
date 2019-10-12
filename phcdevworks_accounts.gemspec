@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.authors     = ["PHCDevworks"]
   spec.email       = ["developers@phcdevworks.com"]
   spec.homepage    = "https://phcdevworks.com/"
-  spec.summary     = "Rails 6 Accounts Engine"
-  spec.description = "Ruby on Rails 6 Authentication and User Management Engine for Enterprise."
+  spec.summary     = "Rails 6 - Engine - User Accounts"
+  spec.description = "Ruby on Rails 6 Authentication and User Management Engine."
   spec.license     = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the "allowed_push_host"
