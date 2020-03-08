@@ -1,7 +1,11 @@
 PhcdevworksAccounts::Engine.routes.draw do
 
     # User Routes
-    devise_for :users, class_name: "PhcdevworksAccounts::User", module: :devise
+    devise_for :users, {
+        class_name: "PhcdevworksAccounts::User",
+        module: :devise,
+        controllers: { registrations: "users/registrations"}
+    }
 
     # User Dashboard
     get 'dashboard', to: 'accounts/dashboard#index'
