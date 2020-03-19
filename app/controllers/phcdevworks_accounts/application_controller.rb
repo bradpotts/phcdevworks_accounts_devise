@@ -21,10 +21,5 @@ module PhcdevworksAccounts
       devise_parameter_sanitizer.permit :account_update, keys: added_attrs
     end
 
-    # Redirect User to Root After Login
-    def after_sign_in_path_for(resource)
-      main_app.root_path
-    end
-
   end
 end
