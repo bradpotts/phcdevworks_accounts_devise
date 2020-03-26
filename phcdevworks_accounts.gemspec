@@ -33,7 +33,6 @@ Gem::Specification.new do |spec|
   spec.add_dependency "phcthemes_web_theme_pack", "~> 1.6"
 
   # Helper Dependencies
-
   spec.add_dependency "phcdevworks_active_menus", "~> 1.1"
   spec.add_dependency "phcdevworks_core", "~> 1.1"
   spec.add_dependency "phcdevworks_notifications", "~> 1.1"
