@@ -36,7 +36,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency "phcdevworks_active_menus", "~> 1.1"
   spec.add_dependency "phcdevworks_core", "~> 1.1"
   spec.add_dependency "phcdevworks_notifications", "~> 1.1"
-  spec.add_dependency "phcdevworks_titleseo", "~> 1.1"
+  spec.add_dependency "phcdevworks_titleseo", "~> 2.0"
 
   # Frontend Dependencies
   spec.add_dependency "wicked", "~> 1.3"
@@ -45,7 +45,7 @@ Gem::Specification.new do |spec|
 
   # Images & Service Support Dependencies
   spec.add_dependency "aws-sdk-s3", "~> 1.61"
-  spec.add_dependency "google-cloud-storage", "~> 1.25"
+  spec.add_dependency "google-cloud-storage", "~> 1.26"
   spec.add_dependency "mini_magick", "~> 4.10"
 
   # Security Dependencies
@@ -53,7 +53,7 @@ Gem::Specification.new do |spec|
     spec.add_dependency "simple_token_authentication", "~> 1.17"
 
   # Payments Dependencies
-  spec.add_dependency "activemerchant", "~> 1.106"
+  spec.add_dependency "activemerchant", "~> 1.107"
 
   # Development Dependencies
   spec.add_development_dependency "sqlite3", "~> 1.4"
