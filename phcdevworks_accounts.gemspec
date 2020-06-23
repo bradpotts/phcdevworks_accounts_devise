@@ -24,19 +24,19 @@ Gem::Specification.new do |spec|
   spec.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
 
   # Main Dependencies
-  spec.add_dependency "rails", "~> 6.0", ">= 6.0.3.1"
+  spec.add_dependency "rails", "~> 6.0", ">= 6.0.3.2"
   spec.add_dependency "jbuilder", "~> 2.10"
   spec.add_dependency "paper_trail", "~> 10.3"
 
   # Theme Dependencies
-  spec.add_dependency "phcthemes_admin_panel_pack", "~> 1.7"
-  spec.add_dependency "phcthemes_web_theme_pack", "~> 1.7"
+  spec.add_dependency "phcthemes_admin_panel_pack", "~> 1.8"
+  spec.add_dependency "phcthemes_web_theme_pack", "~> 1.8"
 
   # Helper Dependencies
-  spec.add_dependency "phcdevworks_active_menus", "~> 1.2"
-  spec.add_dependency "phcdevworks_core", "~> 1.2"
-  spec.add_dependency "phcdevworks_notifications", "~> 1.2"
-  spec.add_dependency "phcdevworks_titleseo", "~> 2.1"
+  spec.add_dependency "phcdevworks_active_menus", "~> 1.3"
+  spec.add_dependency "phcdevworks_core", "~> 1.3"
+  spec.add_dependency "phcdevworks_notifications", "~> 1.3"
+  spec.add_dependency "phcdevworks_titleseo", "~> 2.2"
 
   # Frontend Dependencies
   spec.add_dependency "wicked", "~> 1.3"
@@ -50,7 +50,7 @@ Gem::Specification.new do |spec|
 
   # Security Dependencies
   spec.add_dependency "devise", "~> 4.7"
-    spec.add_dependency "simple_token_authentication", "~> 1.17"
+  spec.add_dependency "simple_token_authentication", "~> 1.17"
 
   # Payments Dependencies
   spec.add_dependency "activemerchant", "~> 1.107"
