@@ -1,3 +1,3 @@
 module PhcdevworksAccounts
-    VERSION = "1.10.0"
+    VERSION = "1.12.0"
 end

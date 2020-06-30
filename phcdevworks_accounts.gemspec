@@ -29,8 +29,8 @@ Gem::Specification.new do |spec|
   spec.add_dependency "paper_trail", "~> 10.3"
 
   # Theme Dependencies
-  spec.add_dependency "phcthemes_admin_panel_pack", "~> 1.9"
-  spec.add_dependency "phcthemes_web_theme_pack", "~> 1.9"
+  spec.add_dependency "phcthemes_admin_panel_pack", "~> 1.10"
+  spec.add_dependency "phcthemes_web_theme_pack", "~> 1.10"
 
   # Helper Dependencies
   spec.add_dependency "phcdevworks_active_menus", "~> 1.4"
