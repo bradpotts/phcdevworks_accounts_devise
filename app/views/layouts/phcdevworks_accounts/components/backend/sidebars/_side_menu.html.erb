@@ -3,7 +3,7 @@
 
     <!-- -PHC- Sidebar - User Profile Menu -->
     <ul class="nav">
-        <% if current_user %>
+        <% if defined?phcdevworks_accounts && current_user %>
             <li class="nav-profile">
                 <a href="javascript:;" data-toggle="nav-profile">
                     <div class="cover with-shadow"></div>
@@ -260,7 +260,7 @@
             <!-- -PHC- Sidebar - Sidebar Navigation - PHCDevworks Core Modules -->
         <% end %>
 
-        <% if current_user && current_user.admin? %>
+        <% if defined?phcdevworks_accounts && current_user && current_user.admin? %>
             <!-- -PHC- Sidebar - Sidebar Navigation - PHCAccounts Admin Options -->
             <li class="nav-header">User Administration</li>
             <li class="has-sub">
@@ -274,9 +274,9 @@
                 </ul>
             </li>
             <!-- -PHC- Sidebar - Sidebar Navigation - PHCAccounts Admin Options -->
-            <% end %>
+        <% end %>
     
-            <% if current_user %>
+        <% if defined?phcdevworks_accounts && current_user %>
             <!-- -PHC- Sidebar - Sidebar Navigation - PHCAccounts User Options -->
             <li class="nav-header">Your Account</li>
             <li class="has-sub">
