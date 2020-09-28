@@ -32,10 +32,5 @@ module PhcdevworksAccounts
             phcdevworks_accounts.admin_users_index_path
         end
 
-
-
-
-
-
     end
 end
