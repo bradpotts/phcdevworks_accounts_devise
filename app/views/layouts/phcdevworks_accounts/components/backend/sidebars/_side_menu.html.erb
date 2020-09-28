@@ -3,29 +3,29 @@
 
     <!-- -PHC- Sidebar - User Profile Menu -->
     <ul class="nav">
-        <% if defined?phcdevworks_accounts && current_user %>
+        <% if current_user %>
             <li class="nav-profile">
                 <a href="javascript:;" data-toggle="nav-profile">
                     <div class="cover with-shadow"></div>
                     <div class="image">
-                        <%= image_tag current_user.gravatar_url %>
+                        <%= image_tag user_avatar %>
                     </div>
                     <div class="info">
                         <b class="caret pull-right"></b>
-                        <%= current_user.firstname + " " + current_user.lastname  %>
-                        <small><%= current_user.username %></small>
+                        <%= user_first_name + " " + user_last_name %>
+                        <small><%= user_profile_name %></small>
                     </div>
                 </a>
             </li>
             <li>
                 <ul class="nav nav-profile">
                     <li>
-                        <%= link_to phcdevworks_accounts.edit_user_registration_path do %>
+                        <%= link_to user_link_edit do %>
                             <i class="fad fa-cogs"></i> Account Settings
                         <% end %>
                     </li>
                     <li>
-                        <%= link_to phcdevworks_accounts.destroy_user_session_path do %>
+                        <%= link_to user_link_logout, method: :delete do %>
                             <i class="fad fa-sign-out-alt"></i> Logout
                         <% end %>
                     </li>
@@ -260,7 +260,7 @@
             <!-- -PHC- Sidebar - Sidebar Navigation - PHCDevworks Core Modules -->
         <% end %>
 
-        <% if defined?phcdevworks_accounts && current_user && current_user.admin? %>
+        <% if current_user && current_user.admin? %>
             <!-- -PHC- Sidebar - Sidebar Navigation - PHCAccounts Admin Options -->
             <li class="nav-header">User Administration</li>
             <li class="has-sub">
@@ -270,13 +270,13 @@
                     <span>Admin</span>
                 </a>
                 <ul class="sub-menu">
-                    <li class="<%= phc_menu_active_controller("phcdevworks_accounts/admin/users") %>"><%= link_to "User List", phcdevworks_accounts.admin_users_index_path %></li>
+                    <li class="<%= phc_menu_active_controller("phcdevworks_accounts/admin/users") %>"><%= link_to "User List", admin_link_index %></li>
                 </ul>
             </li>
             <!-- -PHC- Sidebar - Sidebar Navigation - PHCAccounts Admin Options -->
         <% end %>
     
-        <% if defined?phcdevworks_accounts && current_user %>
+        <% if current_user %>
             <!-- -PHC- Sidebar - Sidebar Navigation - PHCAccounts User Options -->
             <li class="nav-header">Your Account</li>
             <li class="has-sub">
@@ -286,8 +286,8 @@
                     <span>Accounts Settings</span>
                 </a>
                 <ul class="sub-menu">
-                    <li class="<%= phc_menu_active_controller("phcdevworks_accounts/user/edit") %>"><%= link_to "Settings", phcdevworks_accounts.edit_user_registration_path %></li>
-                    <li class="<%= phc_menu_active_controller("phcdevworks_accounts/user/new") %>"><%= link_to "Logout", phcdevworks_accounts.destroy_user_session_path, method: :delete %></li>
+                    <li class="<%= phc_menu_active_controller("phcdevworks_accounts/user/edit") %>"><%= link_to "Settings", user_link_edit %></li>
+                    <li class="<%= phc_menu_active_controller("phcdevworks_accounts/user/new") %>"><%= link_to "Logout", user_link_logout, method: :delete %></li>
                 </ul>
             </li>
             <!-- -PHC- Sidebar - Sidebar Navigation - PHCAccounts User Options -->
