@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.email       = ["imfo@phcdevworks.com"]
   spec.homepage    = "https://phcdevworks.com/"
   spec.summary     = "Rails 6 - Engine - User Accounts"
-  spec.description = "Ruby on Rails 6 Authentication and User Management Engine."
+  spec.description = "Ruby on Rails 6 Authentication and User Management Engine using Devise with a nice-looking dashboard, admin panel and login views to get you going fast on your next project."
   spec.license     = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the "allowed_push_host"
