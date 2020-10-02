@@ -2,7 +2,7 @@
 <div class="navbar-header">
 
     <%= link_to main_app.root_path, class: "navbar-brand" do %>
-        <strong>PHC</strong>Devworks 
+        <strong>PHCDevworks</strong>Accounts
     <% end %>
 
     <button type="button" class="navbar-toggle" data-click="sidebar-toggled">
@@ -21,14 +21,14 @@
         <!-- -PHC- Topbar - Navigation Main - User Menu -->
         <li class="dropdown navbar-user">
             <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
-                <%= image_tag user_avatar %>
-                <span class="d-none d-md-inline"><%= user_first_name + " " + user_last_name %></span> <b class="caret"></b>
+                <%= image_tag current_user.gravatar_url %>
+                <span class="d-none d-md-inline"><%= current_user.firstname + " " + current_user.lastname  %></span> <b class="caret"></b>
             </a>
             <div class="dropdown-menu dropdown-menu-right">
-                <%= link_to user_link_edit, class: "dropdown-item" do %>
+                <%= link_to phcdevworks_accounts.edit_user_registration_path, class: "dropdown-item" do %>
                     <i class="fad fa-cogs"></i> Account Settings
                 <% end %>
-                <%= link_to user_link_logout, method: :delete, class: "dropdown-item" do %>
+                <%= link_to phcdevworks_accounts.destroy_user_session_path, method: :delete, class: "dropdown-item" do %>
                     <i class="fad fa-sign-out-alt"></i> Logout
                 <% end %>
             </div>

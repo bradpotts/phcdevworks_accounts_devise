@@ -8,7 +8,7 @@ PhcdevworksAccounts::Engine.routes.draw do
     }
 
     # User Dashboard
-    get 'dashboard', to: 'accounts/dashboard#index'
+    get 'dashboard', to: 'account/dashboard#index'
 
     # Admin Routes
     get "admin_dashboard", to: "admin/accounts#index"
