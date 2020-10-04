@@ -35,7 +35,7 @@
 
                 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |form| %>
 
-                    <%= devise_error_messages! %>
+                    <%= render "devise/shared/error_messages", resource: resource %>
 
                     <div class="form-group m-b-15">
                         <%= form.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email", class: "form-control form-control-lg" %>

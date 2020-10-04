@@ -36,7 +36,7 @@
                 <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |form| %>
 
  					<!-- Devise Error Message -->
-					<%= devise_error_messages! %>
+					<%= render "devise/shared/error_messages", resource: resource %>
 					<!-- Devise Error Message -->
 
                     <div class="form-group">
