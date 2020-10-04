@@ -1,7 +1,7 @@
 require 'test_helper'
 
 module PhcdevworksAccounts
-  class Admin::AccountsControllerTest < ActionDispatch::IntegrationTest
+  class User::PagesControllerTest < ActionDispatch::IntegrationTest
     include Engine.routes.url_helpers
 
     # test "the truth" do

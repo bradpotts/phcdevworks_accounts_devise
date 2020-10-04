@@ -1,4 +1,4 @@
 module PhcdevworksAccounts
-  module Account::DashboardHelper
+  module Admin::PagesHelper
   end
 end
