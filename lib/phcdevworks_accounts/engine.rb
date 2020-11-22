@@ -30,9 +30,6 @@ module PhcdevworksAccounts
     require "devise"
     require "simple_token_authentication"
 
-    # Payment Dependencies
-    require "activemerchant"
-
     # Plugin Namespace
     isolate_namespace PhcdevworksAccounts
 
