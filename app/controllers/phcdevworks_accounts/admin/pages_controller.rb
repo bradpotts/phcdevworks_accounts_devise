@@ -6,7 +6,7 @@ module PhcdevworksAccounts
         # Filters
         include PhcdevworksCore::PhcdevworksPluginsHelper
         before_action :phcdevworks_accounts_admin_only
-
+        layout "phcdevworks_accounts/application_profile", :only => [ :user_profile ]
 
         # Account Admin
         def dashboard
@@ -17,7 +17,7 @@ module PhcdevworksAccounts
             @admin_users = User.all
         end
 
-        def user_id
+        def user_profile
             @admin_user = User.find_by_id(params[:id])
         end
 
