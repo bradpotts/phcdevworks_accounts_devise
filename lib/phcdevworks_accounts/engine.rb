@@ -26,6 +26,9 @@ module PhcdevworksAccounts
     require "gravtastic"
     require "friendly_id"
 
+    # Mailer Dependencies
+    require "mail_form"
+
     # Security Dependencies
     require "devise"
     require "simple_token_authentication"
