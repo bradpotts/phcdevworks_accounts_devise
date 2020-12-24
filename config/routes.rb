@@ -1,7 +1,7 @@
 PhcdevworksAccounts::Engine.routes.draw do
 
     # User Dashboard
-    match "user/dashboard", to: "user/pages#dashboard", via: "get"
+    match "user", to: "user/pages#dashboard", via: "get"
     match "user/profile", to: "user/pages#profile", via: "get"
 
     # Admin Routes

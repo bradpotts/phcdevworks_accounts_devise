@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  mount PhcdevworksAccounts::Engine => "/phcdevworks_accounts"
+  mount PhcdevworksAccounts::Engine => "/"
 end
