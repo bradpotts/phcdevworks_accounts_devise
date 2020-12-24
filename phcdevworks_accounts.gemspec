@@ -1,8 +1,8 @@
-$:.push File.expand_path("lib", __dir__)
-require "phcdevworks_accounts/version"
+require_relative "lib/phcdevworks_accounts/version"
 
 Gem::Specification.new do |spec|
 
+  # Engine Data
   spec.name        = "phcdevworks_accounts"
   spec.version     = PhcdevworksAccounts::VERSION
   spec.authors     = ["PHCDevworks"]
@@ -12,15 +12,13 @@ Gem::Specification.new do |spec|
   spec.description = "Ruby on Rails 6 Authentication and User Management Engine using Devise with a nice-looking dashboard, admin panel and login views to get you going fast on your next project."
   spec.license     = "MIT"
 
-  # Prevent pushing this gem to RubyGems.org. To allow pushes either set the "allowed_push_host"
-  # to allow pushing to a single host or delete this section to allow pushing to any host.
-  #if spec.respond_to?(:metadata)
-  #spec.metadata["allowed_push_host"] = "TODO: Set to "http://mygemserver.com""
-  #else
-  #raise "RubyGems 2.0 or newer is required to protect against " \
-  #"public gem pushes."
-  #end
+  # Engine Meta Data
+  spec.metadata["allowed_push_host"] = "https://rubygems.org/"
+  spec.metadata["homepage_uri"] = spec.homepage
+  spec.metadata["source_code_uri"] = "https://github.com/phcdevworks/phcdevworks_accounts"
+  spec.metadata["changelog_uri"] = "https://github.com/phcdevworks/phcdevworks_accounts/releases"
 
+  # Engine Files
   spec.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
 
   # Main Dependencies
@@ -42,7 +40,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency "wicked", "~> 1.3"
   spec.add_dependency "friendly_id", "~> 5.4"
   spec.add_dependency "gravtastic", "~> 3.2"
-  
+
   # Mailer Dependencies
   spec.add_dependency "mail_form", "~> 1.8"
 

@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    phcdevworks_accounts (2.5.0)
+    phcdevworks_accounts (3.0.0)
       aws-sdk-s3 (~> 1.86)
       devise (~> 4.7)
       friendly_id (~> 5.4)
@@ -86,7 +86,7 @@ GEM
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
     aws-eventstream (1.1.0)
-    aws-partitions (1.410.0)
+    aws-partitions (1.413.0)
     aws-sdk-core (3.110.0)
       aws-eventstream (~> 1, >= 1.0.2)
       aws-partitions (~> 1, >= 1.239.0)
@@ -95,9 +95,9 @@ GEM
     aws-sdk-kms (1.40.0)
       aws-sdk-core (~> 3, >= 3.109.0)
       aws-sigv4 (~> 1.1)
-    aws-sdk-s3 (1.86.2)
+    aws-sdk-s3 (1.87.0)
       aws-sdk-core (~> 3, >= 3.109.0)
-      aws-sdk-kms (~> 1.26)
+      aws-sdk-kms (~> 1)
       aws-sigv4 (~> 1.1)
     aws-sigv4 (1.2.2)
       aws-eventstream (~> 1, >= 1.0.2)
@@ -124,10 +124,10 @@ GEM
       rake (>= 12.0.0, < 14.0.0)
     erubi (1.10.0)
     execjs (2.7.0)
-    faraday (1.1.0)
+    faraday (1.2.0)
       multipart-post (>= 1.2, < 3)
       ruby2_keywords
-    ffi (1.14.1)
+    ffi (1.14.2)
     friendly_id (5.4.1)
       activerecord (>= 4.0.0)
     globalid (0.4.2)
@@ -332,11 +332,11 @@ GEM
     zeitwerk (2.4.2)
 
 PLATFORMS
-  ruby
+  x86_64-linux
 
 DEPENDENCIES
   phcdevworks_accounts!
-  sqlite3 (~> 1.4)
+  sqlite3
 
 BUNDLED WITH
-   2.1.4
+   2.2.2

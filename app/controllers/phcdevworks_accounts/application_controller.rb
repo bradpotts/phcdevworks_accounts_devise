@@ -1,6 +1,6 @@
 module PhcdevworksAccounts
     class ApplicationController < ActionController::Base
-    
+
         # Devise Filter
         before_action :phcdevworks_accounts_permitted_parameters, if: :devise_controller?
 
