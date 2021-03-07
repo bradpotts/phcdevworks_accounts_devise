@@ -212,7 +212,7 @@ GEM
     paper_trail (11.1.0)
       activerecord (>= 5.2)
       request_store (~> 1.1)
-    phcdevworks_active_menus (2.2.2)
+    phcdevworks_active_menus (2.2.4)
       phcthemes_admin_panel_pack (~> 4.0)
       phcthemes_web_theme_pack (~> 4.0)
       rails (~> 6.1)
