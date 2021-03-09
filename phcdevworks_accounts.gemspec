@@ -54,6 +54,10 @@ Gem::Specification.new do |spec|
   spec.add_dependency "simple_token_authentication", "~> 1.17"
 
   # Development Dependencies
+  spec.add_development_dependency "factory_bot_rails", "~> 6.1"
+  spec.add_development_dependency "rspec-rails", "~> 4.1"
+  spec.add_development_dependency "spring", "~> 2.1"
+  spec.add_development_dependency "spring-commands-rspec", "~> 1.0"
   spec.add_development_dependency "sqlite3", "~> 1.4"
 
 end
