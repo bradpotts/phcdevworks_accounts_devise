@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_12_060324) do
+ActiveRecord::Schema.define(version: 2021_04_02_042717) do
 
   create_table "phcdevworks_accounts_users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -38,6 +38,7 @@ ActiveRecord::Schema.define(version: 2019_10_12_060324) do
     t.string "org_id"
     t.integer "role"
     t.boolean "terms_of_service"
+    t.string "stripe_customer_id"
     t.index ["confirmation_token"], name: "index_phcdevworks_accounts_users_on_confirmation_token", unique: true
     t.index ["email"], name: "index_phcdevworks_accounts_users_on_email", unique: true
     t.index ["firstname"], name: "index_phcdevworks_accounts_users_on_firstname"

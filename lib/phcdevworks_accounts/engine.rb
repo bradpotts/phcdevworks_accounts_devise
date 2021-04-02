@@ -29,9 +29,10 @@ module PhcdevworksAccounts
         # Mailer Dependencies
         require "mail_form"
 
-        # Security Dependencies
+        # Security & Payment Dependencies
         require "devise"
         require "simple_token_authentication"
+        require "stripe"
 
         # Plugin Namespace
         isolate_namespace PhcdevworksAccounts

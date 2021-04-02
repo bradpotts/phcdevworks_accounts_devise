@@ -49,9 +49,10 @@ Gem::Specification.new do |spec|
   spec.add_dependency "google-cloud-storage", "~> 1.30"
   spec.add_dependency "mini_magick", "~> 4.11"
 
-  # Security Dependencies
+  # Security & Payment Dependencies
   spec.add_dependency "devise", "~> 4.7"
   spec.add_dependency "simple_token_authentication", "~> 1.17"
+  spec.add_dependency "stripe", "~> 5.30"
 
   # Development Dependencies
   spec.add_development_dependency "factory_bot_rails", "~> 6.1"
