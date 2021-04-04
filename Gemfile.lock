@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    phcdevworks_accounts (3.0.5)
+    phcdevworks_accounts (3.0.6)
       aws-sdk-s3 (~> 1.89)
       devise (~> 4.7)
       friendly_id (~> 5.4)
