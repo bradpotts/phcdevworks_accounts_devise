@@ -16,7 +16,7 @@ module PhcdevworksAccounts
 
         # Whitelist Additional Fields
         def phcdevworks_accounts_permitted_parameters
-            added_attrs = [:username, :firstname, :lastname, :email, :terms_of_service, :password, :password_confirmation, :remember_me]
+            added_attrs = [:username, :firstname, :lastname, :email, :terms_of_service, :payments_customer_id, :payments_subscription_id, :payments_plan_id, :password, :password_confirmation, :remember_me]
             devise_parameter_sanitizer.permit :sign_up, keys: added_attrs
             devise_parameter_sanitizer.permit :account_update, keys: added_attrs
         end

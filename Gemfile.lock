@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    phcdevworks_accounts (3.1.0)
+    phcdevworks_accounts (3.1.1)
       aws-sdk-s3 (~> 1.89)
       devise (~> 4.7)
       friendly_id (~> 5.4)
@@ -87,7 +87,7 @@ GEM
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
     aws-eventstream (1.1.1)
-    aws-partitions (1.441.0)
+    aws-partitions (1.442.0)
     aws-sdk-core (3.113.1)
       aws-eventstream (~> 1, >= 1.0.2)
       aws-partitions (~> 1, >= 1.239.0)
@@ -193,7 +193,7 @@ GEM
     jquery-ui-rails (6.0.1)
       railties (>= 3.2.16)
     jwt (2.2.2)
-    loofah (2.9.0)
+    loofah (2.9.1)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
     mail (2.7.1)
@@ -210,7 +210,7 @@ GEM
     multi_json (1.15.0)
     multipart-post (2.1.1)
     nio4r (2.5.7)
-    nokogiri (1.11.2-x86_64-linux)
+    nokogiri (1.11.3-x86_64-linux)
       racc (~> 1.4)
     orm_adapter (0.5.0)
     os (1.1.1)
