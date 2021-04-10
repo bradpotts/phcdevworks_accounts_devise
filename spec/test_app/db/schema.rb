@@ -39,8 +39,6 @@ ActiveRecord::Schema.define(version: 2021_04_07_121952) do
     t.integer "role"
     t.boolean "terms_of_service"
     t.string "payments_customer_id"
-    t.string "payments_subscription_id"
-    t.string "payments_plan_id"
     t.index ["confirmation_token"], name: "index_phcdevworks_accounts_users_on_confirmation_token", unique: true
     t.index ["email"], name: "index_phcdevworks_accounts_users_on_email", unique: true
     t.index ["firstname"], name: "index_phcdevworks_accounts_users_on_firstname"

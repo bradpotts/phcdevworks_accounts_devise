@@ -4,6 +4,8 @@ module PhcdevworksAccounts
     # Autogenerate Organization ID
     before_create :phcdevworks_generate_org_id
 
+    # , if: -> {defined?(PhcdevworksAccountsStripe)}
+  
     # User Gravatar Support
     include Gravtastic
     gravtastic
@@ -14,7 +16,10 @@ module PhcdevworksAccounts
 
     # Include default devise modules. Others available are:
     # :trackable, :confirmable, :lockable and :omniauthable
-    devise :database_authenticatable, :registerable, :recoverable, :rememberable,  :validatable, :timeoutable
+    devise :database_authenticatable, :registerable, :recoverable, :rememberable, :validatable, :timeoutable
+
+    # Validations
+    validates :username, :presence => true, :uniqueness => true
 
     private
 
