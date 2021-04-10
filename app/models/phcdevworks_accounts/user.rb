@@ -4,8 +4,6 @@ module PhcdevworksAccounts
     # Autogenerate Organization ID
     before_create :phcdevworks_generate_org_id
 
-    # , if: -> {defined?(PhcdevworksAccountsStripe)}
-  
     # User Gravatar Support
     include Gravtastic
     gravtastic
