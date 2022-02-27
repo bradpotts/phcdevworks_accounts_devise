@@ -1,4 +1,4 @@
-class AddUserinfoToUsers < ActiveRecord::Migration[6.0]
+class AddUserinfoToUsers < ActiveRecord::Migration[7.0]
   def change
 
     add_column :phcdevworks_accounts_users, :firstname, :string
