@@ -23,7 +23,6 @@ module PhcdevworksAccounts
 
     # Frontend Dependencies
     require "wicked"
-    require "gravtastic"
     require "friendly_id"
 
     # Mailer Dependencies
