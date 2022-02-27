@@ -31,7 +31,7 @@
 <body>
 
     <!-- Page Container -->
-    <div id="page-container" class="fade page-sidebar-fixed page-header-fixed">
+    <div id="page-container" class="page-container fade page-sidebar-fixed page-header-fixed">
 
         <!-- Page Header -->
         <div id="header" class="header navbar-default">
@@ -47,14 +47,14 @@
         <!-- Page Sidebar -->
 
         <!-- Page Content -->
-        <div id="content" class="content">
+        <div id="content" class="content content-full-width">
             <%= render "phcdevworks_notifications/bootstrap/notifications" %>
             <%= yield %>
         </div>
         <!-- Page Content -->
 
         <!-- Footer Content -->
-        <div id="footer" class="footer mb-4">
+        <div id="footer" class="row footer mb-4">
             <%= render "layouts/phcdevworks_accounts/components/backend/footer/footer" %>
         </div>
         <!-- Footer Content -->

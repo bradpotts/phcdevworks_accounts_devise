@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <!-- SEO System -->
+    <% phc_seo_title "PHCDevworks Accounts" %>
+    <% phc_seo_description "Ruby on Rails 6 Authentication and User Management Engine." %>
+    <!-- SEO System -->
+
+    <!-- SEO and Site Description -->
+	<meta charset="utf-8">
+	<title><%= yield(:phc_seo_title) %></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="description" content="<%= yield(:phc_seo_description) %>">
+    <!-- SEO and Site Description -->
+
+    <!-- Rails Security Tags -->
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <!-- Rails Security Tags -->
+
+    <!-- CSS Styles -->
+    <%= stylesheet_link_tag "phcthemes_admin_panel_pack_coloradmin", media: "all" %>
+    <!-- CSS Styles -->
+
+    <!-- JavaScript -->
+    <%= javascript_include_tag "phcthemes_admin_panel_pack_coloradmin" %>
+    <!-- JavaScript -->
+
+</head>
+<body class="pace-top bg-white">
+
+    <!-- Page Content -->
+    <%= yield %>
+    <!-- Page Content -->
+
+</body>
+</html>
