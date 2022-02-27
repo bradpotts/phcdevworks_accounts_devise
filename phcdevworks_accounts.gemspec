@@ -47,4 +47,11 @@ Gem::Specification.new do |spec|
   spec.add_dependency "devise", "~> 4.8"
   spec.add_dependency "stripe", "~> 5.44"
 
+  # Development Dependencies
+  spec.add_development_dependency "factory_bot_rails", "~> 6.2"
+  spec.add_development_dependency "rspec-rails", "~> 5.0"
+  spec.add_development_dependency "spring", "~> 3.0"
+  spec.add_development_dependency "spring-commands-rspec", "~> 1.0"
+  spec.add_development_dependency "sqlite3", "~> 1.4"
+
 end
