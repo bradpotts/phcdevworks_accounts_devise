@@ -30,7 +30,6 @@ module PhcdevworksAccounts
 
     # Security & Payment Dependencies
     require "devise"
-    require "simple_token_authentication"
     require "stripe"
 
     # Plugin Namespace

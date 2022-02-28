@@ -1,114 +1,109 @@
 <!-- Page Container -->
-<div id="page-container">
+<div id="app" class="app">
 
     <!-- Registration Area -->
     <div class="register register-with-news-feed">
-    
+
         <!-- Ad/News Feed Area -->
         <div class="news-feed">
             <div class="news-image" style="background-image: url(https://static.phcnetworks.net/phc_engines/phc_accounts_pro/tropical_house_beach.jpg)"></div>
             <div class="news-caption">
                 <h4 class="caption-title"><strong>PHC</strong>Devworks</h4>
-                <p>Rails 6 User Accounts Engine</p>
+                <p>Rails7 User Accounts Engine</p>
             </div>
         </div>
         <!-- Ad/News Feed Area -->
-    
+
         <!-- Registration Form -->
-        <div class="right-content">
-    
+        <div class="register-container">
+
             <!-- Page Notifications -->
             <%= render "phcdevworks_notifications/bootstrap/notifications" %>
             <!-- Page Notifications -->
-    
+
             <!-- Registration Form Header -->
-            <h1 class="register-header">
-                Accounts Signup
-                <small>No credit card requried on signup.</small>
-            </h1>
+            <div class="register-header mb-25px h1">
+                <div class="mb-1">Accounts Signup</div>
+                <small class="d-block fs-15px lh-16">Rails7 User Accouts Using Devise Auth</small>
+            </div>
             <!-- Registration Form Header -->
-    
+
             <!-- Registration Form Content -->
             <div class="register-content">
 
                 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |form| %>
 
-					<!-- Devise Error Message -->
-					<%= render "devise/shared/error_messages", resource: resource %>
-					<!-- Devise Error Message -->
+                    <!-- Devise Error Message -->
+                    <%= render "devise/shared/error_messages", resource: resource %>
+                    <!-- Devise Error Message -->
 
-                    <label class="control-label">Name <span class="text-danger">*</span></label>
-                    <div class="row row-space-10">
-                        <div class="col-md-6 m-b-15">
-                            <%= form.text_field :firstname, autocomplete: "First Name", placeholder: "First Name", class: "form-control" %>
-                        </div>
-                        <div class="col-md-6 m-b-15">
-                            <%= form.text_field :lastname, autocomplete: "Last Name", placeholder: "Last Name", class: "form-control" %>
-                        </div>
-                        <div class="col-md-12 m-b-15">
-                            <%= form.text_field :username, autocomplete: "User Name", placeholder: "User Name", class: "form-control" %>
+                    <div class="mb-3">
+                        <label class="mb-2">Your Name <span class="text-danger">*</span></label>
+                        <div class="row gx-3">
+                            <div class="col-md-6 mb-2 mb-md-0">
+                                <%= form.text_field :firstname, autocomplete: "First Name", placeholder: "First Name", class: "form-control fs-13px" %>
+                            </div>
+                            <div class="col-md-6">
+                                <%= form.text_field :lastname, autocomplete: "Last Name", placeholder: "Last Name", class: "form-control fs-13px" %>
+                            </div>
                         </div>
                     </div>
 
-                    <label class="control-label">Email <span class="text-danger">*</span></label>
-                    <div class="row m-b-15">
-                        <div class="col-md-12">
-                            <%= form.email_field :email, autocomplete: "Email", placeholder: "Email", class: "form-control" %>
-                        </div>
+                    <div class="mb-3">
+                        <label class="mb-2">Your Email <span class="text-danger">*</span></label>
+                        <%= form.email_field :email, autocomplete: "Email", placeholder: "Email", class: "form-control fs-13px" %>
                     </div>
 
-                    <label class="control-label">Password <span class="text-danger">*</span></label>
-                    <div class="row m-b-15">
-                        <div class="col-md-12">
-                            <%= form.password_field :password, autocomplete: "off", placeholder: "Type in a Secure Password", class: "form-control" %>
-                        </div>
+                    <div class="mb-3">
+                        <label class="mb-2">Choose a Username <span class="text-danger">*</span></label>
+                        <%= form.text_field :username, autocomplete: "User Name", placeholder: "User Name", class: "form-control fs-13px" %>
                     </div>
 
-                    <label class="control-label">Password Confirmation <span class="text-danger">*</span></label>
-                    <div class="row m-b-15">
-                        <div class="col-md-12">
-                            <%= form.password_field :password_confirmation, autocomplete: "off", placeholder: "Confirm your Password", class: "form-control" %>
-                        </div>
+                    <div class="mb-3">
+                        <label class="mb-2">Password <span class="text-danger">*</span></label>
+                        <%= form.password_field :password, autocomplete: "off", placeholder: "Type in a Secure Password", class: "form-control fs-13px" %>
                     </div>
 
-                    <div class="checkbox-css m-b-30">
-                        <div class="form-check checkbox-css m-b-30">
-                            <%= form.check_box :terms_of_service, required: true, class: "form-check-input", id: "agreement_checkbox" %>
-                            <label class="form-check-label">
-                                By clicking Sign Up, you agree to our <a href="javascript:;">Terms</a> and that you have read our <a href="javascript:;">Data Policy</a>, including our <a href="javascript:;">Cookie Use</a>.
-                            </label>
-                        </div>
+                    <div class="mb-4">
+                        <label class="mb-2">Password Confirmation <span class="text-danger">*</span></label>
+                        <%= form.password_field :password_confirmation, autocomplete: "off", placeholder: "Confirm your Password", class: "form-control fs-13px" %>
                     </div>
 
-                    <div class="register-buttons">
-                        <%= form.button :submit, class: "btn btn-primary btn-block btn-lg"  do %>
+                    <div class="form-check mb-4">
+                        <%= form.check_box :terms_of_service, required: true, class: "form-check-input", id: "agreementCheckbox" %>
+                        <label class="form-check-label">
+                            By clicking Sign Up, you agree to our <a href="javascript:;">Terms</a> and that you have read our <a href="javascript:;">Data Policy</a>, including our <a href="javascript:;">Cookie Use</a>.
+                        </label>
+                    </div>
+
+                    <div class="mb-4">
+                        <%= form.button :submit, class: "btn btn-primary d-block w-100 btn-lg h-45px fs-13px"  do %>
                             <i class="batch-icon batch-icon-key"></i>
                             Sign Up
                         <% end %>
                     </div>
 
-                    <div class="m-t-20 m-b-40 p-b-40 text-inverse">
+                    <div class="mb-4 pb-5">
                         <%= render "users/shared/links" %>
                     </div>
 
                 <% end %>
-    
-                <hr>
 
-                <p class="text-center">
+                <hr class="bg-gray-600 opacity-2" />
+                <p class="text-center text-gray-600">
                     <i class="fal fa-copyright"></i> <strong>PHC</strong>Devworks Accounts <%= Time.now.year %> <br>
                     Developed with <i class="fas fa-heart hanna_hearts"></i> by
                     <a class="phcnet_copyright text-dark" href="https://phcdevworks.com/"><u><span class="font-weight-bold">PHC</span>Devworks</u></a>
                 </p>
-                
+
             </div>
             <!-- Registration Form Content -->
-    
+
+            </div>
+            <!-- Registration Form -->
+
         </div>
-        <!-- Registration Form -->
-    
-    </div>
-    <!-- Registration Area -->
+        <!-- Registration Area -->
 
 </div>
 <!-- Page Container -->

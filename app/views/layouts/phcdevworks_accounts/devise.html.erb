@@ -10,7 +10,7 @@
     <!-- SEO and Site Description -->
 	<meta charset="utf-8">
 	<title><%= yield(:phc_seo_title) %></title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
 	<meta name="description" content="<%= yield(:phc_seo_description) %>">
     <!-- SEO and Site Description -->
 
@@ -20,19 +20,19 @@
     <!-- Rails Security Tags -->
 
     <!-- CSS Styles -->
-    <%= stylesheet_link_tag "phcthemes_admin_panel_pack_coloradmin", media: "all" %>
+    <%= stylesheet_link_tag "coloradmin/default/phcthemes_admin_panel_pack_coloradmin", media: "all" %>
     <!-- CSS Styles -->
 
-    <!-- JavaScript -->
-    <%= javascript_include_tag "phcthemes_admin_panel_pack_coloradmin" %>
-    <!-- JavaScript -->
-
 </head>
-<body class="pace-top bg-white">
+<body class='pace-top'>
 
     <!-- Page Content -->
     <%= yield %>
     <!-- Page Content -->
+
+    <!-- JavaScript -->
+    <%= javascript_include_tag "coloradmin/phcthemes_admin_panel_pack_coloradmin" %>
+    <!-- JavaScript -->
 
 </body>
 </html>
