@@ -1,30 +1,35 @@
 <!-- -PHC- Topbar - Navigation Header -->
 <div class="navbar-header">
 
-    <%= link_to phcdevworks_accounts.user_path, class: "navbar-brand" do %>
-        <strong>PHCDevworks</strong>Accounts
-    <% end %>
-
-    <button type="button" class="navbar-toggle" data-click="sidebar-toggled">
+    <button type="button" class="navbar-desktop-toggler" data-toggle="app-sidebar-minify">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
     </button>
 
+    <button type="button" class="navbar-mobile-toggler" data-toggle="app-sidebar-mobile">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+    </button>
+
+    <%= link_to phcdevworks_accounts.user_path, class: "navbar-brand" do %>
+        <strong>PHCDevworks</strong>Accounts
+    <% end %>
+
 </div>
 <!-- -PHC- Topbar - Navigation Header -->
     
 <!-- -PHC- Topbar - Navigation Main -->
-<% if current_user %>
-    <ul class="navbar-nav navbar-right">
+<div class="navbar-nav">
 
-        <!-- -PHC- Topbar - Navigation Main - User Menu -->
-        <li class="dropdown navbar-user">
-            <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
+    <% if current_user %>
+        <div class="navbar-item navbar-user dropdown">
+            <a href="#" class="navbar-link dropdown-toggle d-flex" data-bs-toggle="dropdown">
+                <span class="d-none d-md-inline"><%= "hi," + current_user.firstname + " " + current_user.lastname  + " "%></span>
                 <%= image_tag current_user.gravatar_url %>
-                <span class="d-none d-md-inline"><%= current_user.firstname + " " + current_user.lastname  %></span> <b class="caret"></b>
             </a>
-            <div class="dropdown-menu dropdown-menu-right">
+            <div class="dropdown-menu dropdown-menu-end me-1">
                 <%= link_to phcdevworks_accounts.edit_user_registration_path, class: "dropdown-item" do %>
                     <i class="fad fa-cogs"></i> Account Settings
                 <% end %>
@@ -32,9 +37,8 @@
                     <i class="fad fa-sign-out-alt"></i> Logout
                 <% end %>
             </div>
-        </li>
-        <!-- -PHC- Topbar - Navigation Main - User Menu -->
+        </div>
+    <% end %>
 
-    </ul>
-<% end %>
+</div>
 <!-- -PHC- Topbar - Navigation Main -->
