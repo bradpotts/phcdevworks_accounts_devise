@@ -13,7 +13,7 @@ Devise.setup do |config|
 
   # ==> Controller configuration
   # Configure the parent class to the devise controllers.
-  config.parent_controller = 'PhcdevworksAccounts::ApplicationController'
+  config.parent_controller = 'PhcdevworksAccountsDevise::ApplicationController'
   
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
@@ -279,7 +279,7 @@ Devise.setup do |config|
   #     mount MyEngine, at: '/my_engine'
   #
   # The router that invoked `devise_for`, in the example above, would be:
-  config.router_name = :phcdevworks_accounts
+  config.router_name = :phcdevworks_accounts_devise
   #
   # When using OmniAuth, Devise cannot automatically set OmniAuth path,
   # so you need to do it manually. For the users scope, it would be:
@@ -300,11 +300,11 @@ Devise.setup do |config|
   
   # Change Layouts According to Controller
   Rails.application.config.to_prepare do
-    Devise::SessionsController.layout "phcdevworks_accounts/devise"
-    Devise::RegistrationsController.layout proc{ |controller| user_signed_in? ? "phcdevworks_accounts/application" : "phcdevworks_accounts/devise" }
-    Devise::ConfirmationsController.layout "phcdevworks_accounts/application_no_sidebar"
-    Devise::UnlocksController.layout "phcdevworks_accounts/application_no_sidebar"
-    Devise::PasswordsController.layout "phcdevworks_accounts/application_no_sidebar"
+    Devise::SessionsController.layout "phcdevworks_accounts_devise/devise"
+    Devise::RegistrationsController.layout proc{ |controller| user_signed_in? ? "phcdevworks_accounts_devise/application" : "phcdevworks_accounts_devise/devise" }
+    Devise::ConfirmationsController.layout "phcdevworks_accounts_devise/application_no_sidebar"
+    Devise::UnlocksController.layout "phcdevworks_accounts_devise/application_no_sidebar"
+    Devise::PasswordsController.layout "phcdevworks_accounts_devise/application_no_sidebar"
   end
 
 end

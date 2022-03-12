@@ -9,6 +9,6 @@ Rails.application.routes.draw do
   root :to => "website/pages#index"
 
   # Mount Engine
-  mount PhcdevworksAccounts::Engine => "/"
+  mount PhcdevworksAccountsDevise::Engine => "/"
   
 end

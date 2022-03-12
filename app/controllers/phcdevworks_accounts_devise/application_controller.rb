@@ -2,7 +2,7 @@ module PhcdevworksAccountsDevise
     class ApplicationController < ActionController::Base
 
         # Devise Filter
-        before_action :phcdevworks_accounts_permitted_parameters, if: :devise_controller?
+        before_action :phcdevworks_accounts_devise_permitted_parameters, if: :devise_controller?
 
         # Security Filters
         protect_from_forgery with: :exception

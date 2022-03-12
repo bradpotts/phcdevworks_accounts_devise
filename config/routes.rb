@@ -10,7 +10,7 @@ PhcdevworksAccountsDevise::Engine.routes.draw do
     match "/admin/user/:id", to: "admin/pages#user_profile", via: "get"
 
     # User Routes
-    devise_for :users, class_name: "PhcdevworksAccounts::User",
+    devise_for :users, class_name: "PhcdevworksAccountsDevise::User",
     module: :devise, 
     controllers: {
         registrations: 'users/registrations'
