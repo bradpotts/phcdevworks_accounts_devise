@@ -27,11 +27,11 @@
         <!-- -PHCDev- Page Container - Sidebar - Profile - Menu -->
         <div id="appSidebarProfileMenu" class="collapse">
             <div class="menu-item pt-5px">
-                <%= link_to phcdevworks_accounts.edit_user_registration_path, class: "menu-link" do %>
+                <%= link_to phcdevworks_accounts_devise.edit_user_registration_path, class: "menu-link" do %>
                     <div class="menu-icon"><i class="fad fa-cogs"></i></div>
                     <div class="menu-text">Account Settings</div>
                 <% end %>
-                <%= link_to phcdevworks_accounts.destroy_user_session_path, method: :delete, class: "menu-link" do %>
+                <%= link_to phcdevworks_accounts_devise.destroy_user_session_path, method: :delete, class: "menu-link" do %>
                     <div class="menu-icon"><i class="fad fa-sign-out-alt"></i></div>
                     <div class="menu-text">Logout</div>
                 <% end %>
@@ -511,9 +511,9 @@
                             <div class="menu-text">Users</div>
                             <div class="menu-caret"></div>
                         </a>
-                        <div class="menu-submenu <%= phc_menu_active_controller("phcdevworks_accounts/admin/users") %>">
-                            <div class="menu-item <%= phc_menu_active_action_controller("phcdevworks_accounts/admin/users", "admin_subscription_list") %>">
-                                <%= link_to phcdevworks_accounts.admin_users_all_path, class: "menu-link" do %>
+                        <div class="menu-submenu <%= phc_menu_active_controller("phcdevworks_accounts_devise/admin/users") %>">
+                            <div class="menu-item <%= phc_menu_active_action_controller("phcdevworks_accounts_devise/admin/users", "admin_subscription_list") %>">
+                                <%= link_to phcdevworks_accounts_devise.admin_users_all_path, class: "menu-link" do %>
                                     <div class="menu-text">User List</div>
                                 <% end %>
                             </div>

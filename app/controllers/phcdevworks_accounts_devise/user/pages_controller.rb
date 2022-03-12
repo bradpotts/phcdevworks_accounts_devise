@@ -1,6 +1,6 @@
-require_dependency "phcdevworks_accounts/application_controller"
+require_dependency "phcdevworks_accounts_devise/application_controller"
 
-module PhcdevworksAccounts
+module PhcdevworksAccountsDevise
     class User::PagesController < ApplicationController
 
         # Security Filters

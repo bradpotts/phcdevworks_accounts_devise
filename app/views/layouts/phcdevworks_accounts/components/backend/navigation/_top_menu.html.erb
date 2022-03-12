@@ -13,7 +13,7 @@
         <span class="icon-bar"></span>
     </button>
 
-    <%= link_to phcdevworks_accounts.user_path, class: "navbar-brand" do %>
+    <%= link_to phcdevworks_accounts_devise.user_path, class: "navbar-brand" do %>
         <strong>PHCDevworks</strong>Accounts
     <% end %>
 
@@ -30,10 +30,10 @@
                 <%= image_tag current_user.gravatar_url %>
             </a>
             <div class="dropdown-menu dropdown-menu-end me-1">
-                <%= link_to phcdevworks_accounts.edit_user_registration_path, class: "dropdown-item" do %>
+                <%= link_to phcdevworks_accounts_devise.edit_user_registration_path, class: "dropdown-item" do %>
                     <i class="fad fa-cogs"></i> Account Settings
                 <% end %>
-                <%= link_to phcdevworks_accounts.destroy_user_session_path, method: :delete, class: "dropdown-item" do %>
+                <%= link_to phcdevworks_accounts_devise.destroy_user_session_path, method: :delete, class: "dropdown-item" do %>
                     <i class="fad fa-sign-out-alt"></i> Logout
                 <% end %>
             </div>

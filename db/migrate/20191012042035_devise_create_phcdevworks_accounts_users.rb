@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-class DeviseCreatePhcdevworksAccountsUsers < ActiveRecord::Migration[7.0]
+class DeviseCreatePhcdevworksAccountsDeviseUsers < ActiveRecord::Migration[7.0]
   def change
-    create_table :phcdevworks_accounts_users do |t|
+    create_table :phcdevworks_accounts_devise_users do |t|
 
       ## Database authenticatable
       t.string :email,              null: false, default: ""
@@ -37,10 +37,10 @@ class DeviseCreatePhcdevworksAccountsUsers < ActiveRecord::Migration[7.0]
     
     end
 
-    add_index :phcdevworks_accounts_users, :email,                unique: true
-    add_index :phcdevworks_accounts_users, :reset_password_token, unique: true
-    add_index :phcdevworks_accounts_users, :confirmation_token,   unique: true
-    add_index :phcdevworks_accounts_users, :unlock_token,         unique: true
+    add_index :phcdevworks_accounts_devise_users, :email,                unique: true
+    add_index :phcdevworks_accounts_devise_users, :reset_password_token, unique: true
+    add_index :phcdevworks_accounts_devise_users, :confirmation_token,   unique: true
+    add_index :phcdevworks_accounts_devise_users, :unlock_token,         unique: true
 
   end
 end

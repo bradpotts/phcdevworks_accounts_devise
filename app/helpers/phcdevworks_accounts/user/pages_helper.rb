@@ -1,4 +1,4 @@
-module PhcdevworksAccounts
+module PhcdevworksAccountsDevise
   module User::PagesHelper
   end
 end

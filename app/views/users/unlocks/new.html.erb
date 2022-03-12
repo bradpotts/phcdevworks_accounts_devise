@@ -1,7 +1,7 @@
 <!-- Title System -->
 <% phc_title resource_name.to_s.humanize + " Unlock Password" %>
 <% phc_title_tagline "Unlock Your " + resource_name.to_s.humanize + " Unlock Password" %>
-<% phc_breadcrumb_one link_to resource_name.to_s.humanize + " Home", phcdevworks_accounts.user_path %>
+<% phc_breadcrumb_one link_to resource_name.to_s.humanize + " Home", phcdevworks_accounts_devise.user_path %>
 <% phc_breadcrumb_two yield(:phc_title_tagline) %>
 <!-- Title System -->
 

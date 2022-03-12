@@ -1,4 +1,4 @@
-module PhcdevworksAccounts
+module PhcdevworksAccountsDevise
   class User < ApplicationRecord
 
     # Autogenerate Organization ID

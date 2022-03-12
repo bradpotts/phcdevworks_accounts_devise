@@ -1,12 +1,12 @@
-require_dependency "phcdevworks_accounts/application_controller"
+require_dependency "phcdevworks_accounts_devise/application_controller"
 
-module PhcdevworksAccounts
+module PhcdevworksAccountsDevise
     class Admin::PagesController < ApplicationController
 
         # Filters
         include PhcdevworksCore::PhcdevworksPluginsHelper
         before_action :phcdevworks_accounts_admin_only
-        layout "phcdevworks_accounts/application_profile", :only => [ :user_profile ]
+        layout "phcdevworks_accounts_devise/application_profile", :only => [ :user_profile ]
 
         # Account Admin
         def dashboard
