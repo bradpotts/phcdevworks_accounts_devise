@@ -1,4 +1,4 @@
-PhcdevworksAccounts::Engine.routes.draw do
+PhcdevworksAccountsDevise::Engine.routes.draw do
 
     # User Dashboard
     match "user", to: "user/pages#dashboard", via: "get"

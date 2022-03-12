@@ -1,4 +1,4 @@
-module PhcdevworksAccounts
+module PhcdevworksAccountsDevise
   class Engine < ::Rails::Engine
 
     # Load Main Dependencies
@@ -31,15 +31,12 @@ module PhcdevworksAccounts
     # Security & Payment Dependencies
     require "devise"
     require "stripe"
-
-    # Plugin Namespace
-    isolate_namespace PhcdevworksAccounts
-
+    isolate_namespace PhcdevworksAccountsDevise
     # Rspec Generators
     config.generators do |g|
-      g.test_framework :rspec
-      g.fixture_replacement :factory_bot
-      g.factory_bot dir: 'spec/factories'
+    g.test_framework :rspec
+    g.fixture_replacement :factory_bot
+    g.factory_bot dir: 'spec/factories'
     end
 
   end

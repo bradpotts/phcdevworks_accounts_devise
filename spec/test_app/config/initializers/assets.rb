@@ -9,4 +9,4 @@ Rails.application.config.assets.version = "1.0"
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in the app/assets
 # folder are already added.
-Rails.application.config.assets.precompile += %w( phcthemes_admin_panel_pack_coloradmin.js phcthemes_admin_panel_pack_coloradmin.css )
+# Rails.application.config.assets.precompile += %w( admin.js admin.css )

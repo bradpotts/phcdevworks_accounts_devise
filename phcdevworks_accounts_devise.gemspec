@@ -1,16 +1,16 @@
-require_relative "lib/phcdevworks_accounts/version"
+require_relative "lib/phcdevworks_accounts_devise/version"
 
 Gem::Specification.new do |spec|
 
-  spec.name        = "phcdevworks_accounts"
-  spec.version     = PhcdevworksAccounts::VERSION
+  spec.name        = "phcdevworks_accounts_devise"
+  spec.version     = PhcdevworksAccountsDevise::VERSION
   spec.authors     = ["PHCDevworks"]
   spec.email       = ["imfo@phcdevworks.com"]
   spec.homepage    = "https://phcdevworks.com/"
-  spec.summary     = "Rails 7 - Engine - User Accounts"
+  spec.summary     = "Rails 7 - Engine - User Accounts - Devise"
   spec.description = "Ruby on Rails 7 Authentication and User Management Engine using Devise with a nice-looking dashboard, admin panel and login views to get you going fast on your next project."
   spec.license     = "MIT"
-
+  
   spec.metadata["homepage_uri"] = spec.homepage
   spec.metadata["source_code_uri"] = "https://github.com/phcdevworks/phcdevworks_accounts"
   spec.metadata["changelog_uri"] = "https://github.com/phcdevworks/phcdevworks_accounts/releases"
