@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-# Specify your gem's dependencies in phcdevworks_accounts.gemspec.
+# Specify your gem's dependencies in phcdevworks_accounts_devise.gemspec.
 gemspec
 
 gem "sqlite3"
