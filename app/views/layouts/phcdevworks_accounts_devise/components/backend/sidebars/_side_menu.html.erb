@@ -457,12 +457,12 @@
                         </a>
                         <div class="menu-submenu <%= phc_menu_active_controller("phcdevworks_accounts_stripe/admin/subscriptions") %>">
                             <div class="menu-item <%= phc_menu_active_action_controller("phcdevworks_accounts_stripe/admin/subscriptions", "admin_subscription_list") %>">
-                                <%= link_to "phcdevworks_accounts_stripe.admin_invoices_path", class: "menu-link" do %>
+                                <%= link_to phcdevworks_accounts_stripe.admin_invoices_path, class: "menu-link" do %>
                                     <div class="menu-text">Invoices</div>
                                 <% end %>
                             </div>
                             <div class="menu-item <%= phc_menu_active_action_controller("phcdevworks_accounts_stripe/admin/subscriptions", "admin_subscription_list") %>">
-                                <%= link_to "phcdevworks_accounts_stripe.admin_subscriptions_path", class: "menu-link" do %>
+                                <%= link_to phcdevworks_accounts_stripe.admin_subscriptions_path, class: "menu-link" do %>
                                     <div class="menu-text">Subscriptions</div>
                                 <% end %>
                             </div>
@@ -475,7 +475,7 @@
                         </a>
                         <div class="menu-submenu <%= phc_menu_active_controller("phcdevworks_accounts_stripe/admin/products") %>">
                             <div class="menu-item <%= phc_menu_active_action_controller("phcdevworks_accounts_stripe/admin/products", "admin_products_list") %>">
-                                <%= link_to "phcdevworks_accounts_stripe.admin_products_path", class: "menu-link" do %>
+                                <%= link_to phcdevworks_accounts_stripe.admin_products_path, class: "menu-link" do %>
                                     <div class="menu-text">Product List</div>
                                 <% end %>
                             </div>
@@ -488,7 +488,7 @@
                         </a>
                         <div class="menu-submenu <%= phc_menu_active_controller("phcdevworks_accounts_stripe/admin/customers") %>">
                             <div class="menu-item <%= phc_menu_active_action_controller("phcdevworks_accounts_stripe/admin/customers", "admin_customer_list") %>">
-                                <%= link_to "phcdevworks_accounts_stripe.admin_customers_path", class: "menu-link" do %>
+                                <%= link_to phcdevworks_accounts_stripe.admin_customers_path, class: "menu-link" do %>
                                     <div class="menu-text">Subscriber List</div>
                                 <% end %>
                             </div>
