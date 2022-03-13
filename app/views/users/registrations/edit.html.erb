@@ -1,104 +1,100 @@
-<!-- PHCTitleSEO Title Variables -->
+<!-- -PHCDev- Title System -->
 <% phc_title resource_name.to_s.humanize + " Account Information" %>
 <% phc_title_tagline "Edit Your " + resource_name.to_s.humanize + " Account Information" %>
 <% phc_breadcrumb_one link_to "Home", phcdevworks_accounts_devise.admin_users_all_path %>
 <% phc_breadcrumb_two link_to "Accounts Dashboard", phcdevworks_accounts_devise.user_path %>
 <% phc_breadcrumb_three yield(:phc_title_tagline) %>
-<!-- PHCTitleSEO Title Variables -->
+<!-- -PHCDev- Title System -->
 
-<!-- Page Bradcrumbs -->
+<!-- -PHCDev- Page Bradcrumbs -->
 <ol class="breadcrumb float-xl-end">
 	<li class="breadcrumb-item"><%= yield(:phc_breadcrumb_one) %></li>
 	<li class="breadcrumb-item"><%= yield(:phc_breadcrumb_two) %></li>
 	<li class="breadcrumb-item active"><%= yield(:phc_breadcrumb_three) %></li>
 </ol>
-<!-- Page Bradcrumbs -->
+<!-- -PHCDev- Page Bradcrumbs -->
 
-<!-- Page Header -->
+<!-- -PHCDev- Page Header -->
 <h1 class="page-header"><%= yield(:phc_title) %></h1>
-<!-- Page Header -->
+<!-- -PHCDev- Page Header -->
 
-<!-- Page Content -->
 
-	<!-- Panel -->
-	<div class="panel panel-inverse">
+<!-- -PHCDev- Panel -->
+<div class="panel panel-inverse">
 
-		<!-- Panel - Heading -->
-		<div class="panel-heading">
-			<h4 class="panel-title"><%= yield(:phc_title) %></h4>
-		</div>
-		<!-- Panel - Heading -->
+	<!-- -PHCDev- Panel - Heading -->
+	<div class="panel-heading">
+		<h4 class="panel-title"><%= yield(:phc_title) %></h4>
+	</div>
+	<!-- -PHCDev- Panel - Heading -->
 
-		<!-- Panel - Body -->
-		<div class="panel-body">
+	<!-- -PHCDev- Panel - Body -->
+	<div class="panel-body">
 
-			<!-- Edit Form -->
-			<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |form| %>
+		<!-- Edit Form -->
+		<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |form| %>
 
-				<!-- Devise Error Message -->
-				<%= render "devise/shared/error_messages", resource: resource %>
-				<!-- Devise Error Message -->
+			<!-- Devise Error Message -->
+			<%= render "devise/shared/error_messages", resource: resource %>
+			<!-- Devise Error Message -->
 
-				<div class="mb-3">
-					<div class="row gx-3">
-						<div class="col-md-6 mb-2 mb-md-0">
-							<label class="mb-2"><%= form.label :firstname, "First Name" %></label>
-							<%= form.text_field :firstname, class: "form-control fs-13px", placeholder: "First Name" %>
-						</div>
-						<div class="col-md-6">
-							<label class="mb-2"><%= form.label :lastname, "Last Name" %></label>
-							<%= form.text_field :lastname, class: "form-control fs-13px", placeholder: "Last Name" %>
-						</div>
+			<div class="mb-3">
+				<div class="row gx-3">
+					<div class="col-md-6 mb-2 mb-md-0">
+						<label class="mb-2"><%= form.label :firstname, "First Name" %></label>
+						<%= form.text_field :firstname, class: "form-control fs-13px", placeholder: "First Name" %>
+					</div>
+					<div class="col-md-6">
+						<label class="mb-2"><%= form.label :lastname, "Last Name" %></label>
+						<%= form.text_field :lastname, class: "form-control fs-13px", placeholder: "Last Name" %>
 					</div>
 				</div>
+			</div>
 
-				<div class="mb-3">
-					<label class="mb-2"><%= form.label :username, "User Name" %></label>
-					<%= form.text_field :username, class: "form-control fs-13px", placeholder: "User Name" %>
-				</div>
+			<div class="mb-3">
+				<label class="mb-2"><%= form.label :username, "User Name" %></label>
+				<%= form.text_field :username, class: "form-control fs-13px", placeholder: "User Name" %>
+			</div>
 
-				<div class="mb-3">
-					<label class="mb-2"><%= form.label :email, "Email" %></label>
-					<%= form.email_field :email, class: "form-control fs-13px", placeholder: "Email Address", autofocus: true %>
-				</div>
+			<div class="mb-3">
+				<label class="mb-2"><%= form.label :email, "Email" %></label>
+				<%= form.email_field :email, class: "form-control fs-13px", placeholder: "Email Address", autofocus: true %>
+			</div>
 
-				<% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-					<div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
-				<% end %>
-
-				<a class="btn btn-primary mb-3" data-bs-toggle="collapse" href="#collapseChangepassword" aria-expanded="false" aria-controls="collapseChangepassword">
-					Click Here to Change Password
-				</a>
-
-				<div class="card collapse mb-3" id="collapseChangepassword">
-					<div class="card-header">
-						Change Password
-					</div>
-					<div class="card-body">
-						<% if @minimum_password_length %>
-							<label class="mb-2">New Password <i>(Leave blank if you don't want to change it. Minimum <%= @minimum_password_length %> characters.)</i></label>
-						<% end %>
-						<%= form.password_field :password, class: "form-control fs-13px mb-2", placeholder: "New Password", autocomplete: "off" %>
-						<%= form.password_field :password_confirmation, class: "form-control fs-13px", placeholder: "Confirm New Password", autocomplete: "off" %>
-					</div>
-				</div>
-
-				<div class="mb-3">
-					<label class="mb-2"><%= form.label :current_password %> <i>(We need your current password to confirm your changes)</i></label>
-					<%= form.password_field :current_password, class: "form-control fs-13px", placeholder: "Password" , autocomplete: "off" %>
-				</div>
-
-				<div class="actions">
-					<%= form.submit "Update", class: "btn btn-primary btn-lg" %>
-				</div>
-
+			<% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+				<div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
 			<% end %>
-			<!-- Edit Form -->
 
-		</div>
-		<!-- Panel - Body -->
+			<a class="btn btn-primary mb-3" data-bs-toggle="collapse" href="#collapseChangepassword" aria-expanded="false" aria-controls="collapseChangepassword">
+				Click Here to Change Password
+			</a>
+
+			<div class="card collapse mb-3" id="collapseChangepassword">
+				<div class="card-header">
+					Change Password
+				</div>
+				<div class="card-body">
+					<% if @minimum_password_length %>
+						<label class="mb-2">New Password <i>(Leave blank if you don't want to change it. Minimum <%= @minimum_password_length %> characters.)</i></label>
+					<% end %>
+					<%= form.password_field :password, class: "form-control fs-13px mb-2", placeholder: "New Password", autocomplete: "off" %>
+					<%= form.password_field :password_confirmation, class: "form-control fs-13px", placeholder: "Confirm New Password", autocomplete: "off" %>
+				</div>
+			</div>
+
+			<div class="mb-3">
+				<label class="mb-2"><%= form.label :current_password %> <i>(We need your current password to confirm your changes)</i></label>
+				<%= form.password_field :current_password, class: "form-control fs-13px", placeholder: "Password" , autocomplete: "off" %>
+			</div>
+
+			<div class="actions">
+				<%= form.submit "Update", class: "btn btn-primary btn-lg" %>
+			</div>
+
+		<% end %>
 
 	</div>
-	<!-- Panel -->
+	<!-- -PHCDev- Panel - Body -->
 
-<!-- Page Content -->
+</div>
+<!-- -PHCDev- Panel -->

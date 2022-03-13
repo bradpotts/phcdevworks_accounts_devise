@@ -1,39 +1,36 @@
-<!-- PHCTitleSEO Title Variables -->
+<!-- -PHCDev- Title System -->
 <% phc_title "Send Password Reset Link" %>
 <% phc_title_tagline "Password Reset Form" %>
 <% phc_breadcrumb_one link_to "Home", phcdevworks_accounts_devise.user_path %>
 <% phc_breadcrumb_two yield(:phc_title_tagline) %>
-<!-- PHCTitleSEO Title Variables -->
+<!-- -PHCDev- Title System -->
 
-<!-- Page Bradcrumbs -->
+<!-- -PHCDev- Page Bradcrumbs -->
 <ol class="breadcrumb float-xl-end">
     <li class="breadcrumb-item"><%= yield(:phc_breadcrumb_one) %></li>
     <li class="breadcrumb-item active"><%= yield(:phc_breadcrumb_two) %></li>
 </ol>
-<!-- Page Bradcrumbs -->
+<!-- -PHCDev- Page Bradcrumbs -->
 
-<!-- Page Header -->
+<!-- -PHCDev- Page Header -->
 <h1 class="page-header"><%= yield(:phc_title) %></h1>
-<!-- Page Header -->
+<!-- -PHCDev- Page Header -->
 
-<!-- Panel -->
+<!-- -PHCDev- Panel -->
 <div class="panel panel-inverse">
 
-	<!-- Panel - Heading -->
+	<!-- -PHCDev- Panel - Heading -->
 	<div class="panel-heading">
 		<h4 class="panel-title"><%= yield(:phc_title) %></h4>
 	</div>
-	<!-- Panel - Heading -->
+	<!-- -PHCDev- Panel - Heading -->
 
-	<!-- Panel - Body -->
+	<!-- -PHCDev- Panel - Body -->
 	<div class="panel-body">
 
-		<!-- New Form -->
 		<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |form| %>
 
-			<!-- Devise Error Message -->
 			<%= render "devise/shared/error_messages", resource: resource %>
-			<!-- Devise Error Message -->
 
 			<div class="mb-3">
 				<label class="mb-2"><%= form.label :email %></label>
@@ -46,11 +43,9 @@
 			<% end %>
 
 		<% end %>
-		<!-- New Form -->
 
 	</div>
-	<!-- Panel - Body -->
+	<!-- -PHCDev- Panel - Body -->
 	
 </div>
-<!-- Panel -->
-
+<!-- -PHCDev- Panel -->

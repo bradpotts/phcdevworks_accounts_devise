@@ -1,78 +1,59 @@
-<!-- PHCTitleSEO Title Variables -->
+<!-- -PHCDev- Title System -->
 <% phc_title resource_name.to_s.humanize + " Edit Password" %>
 <% phc_title_tagline "Edit Your " + resource_name.to_s.humanize + " Edit Password" %>
 <% phc_breadcrumb_one link_to resource_name.to_s.humanize + " Accounts Home", phcdevworks_accounts_devise.user_path %>
 <% phc_breadcrumb_two yield(:phc_title_tagline) %>
-<!-- PHCTitleSEO Title Variables -->
+<!-- -PHCDev- Title System -->
 
-<!-- Page Bradcrumbs -->
-<ol class="breadcrumb pull-right">
+<!-- -PHCDev- Page Bradcrumbs -->
+<ol class="breadcrumb float-xl-end">
     <li class="breadcrumb-item"><%= yield(:phc_breadcrumb_one) %></li>
     <li class="breadcrumb-item active"><%= yield(:phc_breadcrumb_two) %></li>
 </ol>
-<!-- Page Bradcrumbs -->
+<!-- -PHCDev- Page Bradcrumbs -->
 
-<!-- Page Header -->
-<h2 class="page-header"><%= yield(:phc_title) %></h2>
-<!-- Page Header -->
+<!-- -PHCDev- Page Header -->
+<h1 class="page-header"><%= yield(:phc_title) %></h1>
+<!-- -PHCDev- Page Header -->
 
-<!-- Page Content -->
-<div class="row">
-	<div class="col-lg-12">
+<!-- -PHCDev- Panel -->
+<div class="panel panel-inverse">
 
-		<!-- Panel -->
-		<div class="panel panel-inverse">
+	<!-- -PHCDev- Panel - Heading -->
+	<div class="panel-heading">
+		<h4 class="panel-title"><%= yield(:phc_title) %></h4>
+	</div>
+	<!-- -PHCDev- Panel - Heading -->
 
-			<!-- Panel - Heading -->
-			<div class="panel-heading">
-				<h4 class="panel-title"><%= yield(:phc_title) %></h4>
+	<!-- -PHCDev- Panel - Body -->
+	<div class="panel-body">
+
+		<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |form| %>
+
+			<%= render "devise/shared/error_messages", resource: resource %>
+
+			<%= form.hidden_field :reset_password_token %>
+
+			<div class="mb-3">
+				<label class="mb-2"><%= form.label :password, "New password" %></label>
+				<% if @minimum_password_length %>
+					<em>(<%= @minimum_password_length %> characters minimum)</em>
+				<% end %>
+				<%= form.password_field :password, autofocus: true, autocomplete: "off", class: "form-control fs-13px" %>
 			</div>
-			<!-- Panel - Heading -->
-
-			<!-- Panel - Body -->
-			<div class="panel-body">
-
-				<!-- Edit Form -->
-                <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |form| %>
-
-					<!-- Devise Error Message -->
-					<%= render "devise/shared/error_messages", resource: resource %>
-					<!-- Devise Error Message -->
-					
-					<!-- Reset Password Token -->
-                    <%= form.hidden_field :reset_password_token %>
-					<!-- Reset Password Token -->
-
-                    <div class="form-group">
-                        <%= form.label :password, "New password" %>
-                        <% if @minimum_password_length %>
-                            <em>(<%= @minimum_password_length %> characters minimum)</em>
-                        <% end %>
-                        <%= form.password_field :password, autofocus: true, autocomplete: "off" %>
-                    </div>
-
-                    <div class="form-group">
-                        <%= form.label :password_confirmation, "Confirm new password" %>
-                        <%= form.password_field :password_confirmation, autocomplete: "off" %>
-                    </div>
-
-                    <div class="actions">
-                        <%= form.submit "Change my password" %>
-                    </div>
-
-                <% end %>
-				<!-- Edit Form -->
-				
-				<!-- Devise Links -->
-                <%= render "devise/shared/links" %>
-				<!-- Devise Links -->
-
+			<div class="mb-3">
+				<label class="mb-2"><%= form.label :password_confirmation, "Confirm new password" %></label>
+				<%= form.password_field :password_confirmation, autocomplete: "off", class: "form-control fs-13px" %>
 			</div>
-			<!-- Panel - Body -->
 
-		</div>
-		<!-- Panel -->
+			<%= form.submit "Change my password" %>
+
+		<% end %>
+
+		<%= render "devise/shared/links" %>
 
 	</div>
+	<!-- -PHCDev- Panel - Body -->
+
 </div>
-<!-- Page Content -->
+<!-- -PHCDev- Panel -->
