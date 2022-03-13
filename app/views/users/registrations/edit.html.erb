@@ -70,18 +70,16 @@
 					Click Here to Change Password
 				</a>
 
-				<div class="mb-3" >
-					<div class="card collapse" id="collapseChangepassword">
-						<div class="card-header">
-							Change Password
-						</div>
-						<div class="card-body">
-							<% if @minimum_password_length %>
-								<label class="mb-2">New Password <i>(Leave blank if you don't want to change it. Minimum <%= @minimum_password_length %> characters.)</i></label>
-							<% end %>
-							<%= form.password_field :password, class: "form-control fs-13px mb-2", placeholder: "New Password", autocomplete: "off" %>
-							<%= form.password_field :password_confirmation, class: "form-control fs-13px", placeholder: "Confirm New Password", autocomplete: "off" %>
-						</div>
+				<div class="card collapse mb-3" id="collapseChangepassword">
+					<div class="card-header">
+						Change Password
+					</div>
+					<div class="card-body">
+						<% if @minimum_password_length %>
+							<label class="mb-2">New Password <i>(Leave blank if you don't want to change it. Minimum <%= @minimum_password_length %> characters.)</i></label>
+						<% end %>
+						<%= form.password_field :password, class: "form-control fs-13px mb-2", placeholder: "New Password", autocomplete: "off" %>
+						<%= form.password_field :password_confirmation, class: "form-control fs-13px", placeholder: "Confirm New Password", autocomplete: "off" %>
 					</div>
 				</div>
 
