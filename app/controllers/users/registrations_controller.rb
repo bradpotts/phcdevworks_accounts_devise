@@ -3,7 +3,7 @@
 class Users::RegistrationsController < Devise::RegistrationsController
   # before_action :configure_sign_up_params, only: [:create]
   # before_action :configure_account_update_params, only: [:update]
-  after_action :phcdevworks_accounts_devise_payments_add_customer, :only => :create, if: -> {defined?(PhcdevworksAccountsStripe)}
+  after_action :phcdevworks_accounts_stripe_add_customer, :only => :create, if: -> {defined?(PhcdevworksAccountsStripe)}
 
   # GET /resource/sign_up
   # def new
@@ -61,7 +61,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   #   super(resource)
   # end
 
-  def phcdevworks_accounts_payments_add_customer
+  def phcdevworks_accounts_stripe_add_customer
     if resource.valid?
       phcdevworks_accounts_devise_customer = Stripe::Customer.create({
         email: current_user.email, name: current_user.firstname + " " + current_user.lastname
