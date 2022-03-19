@@ -66,7 +66,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
       phcdevworks_accounts_devise_customer = Stripe::Customer.create({
         email: current_user.email, name: current_user.firstname + " " + current_user.lastname
       })
-      @user.payments_customer_id = phcdevworks_accounts_customer.id
+      @user.payments_customer_id = phcdevworks_accounts_devise_customer.id
       @user.save
     end
   end
