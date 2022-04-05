@@ -1,14 +1,14 @@
 Rails.application.routes.draw do
 
-  # Website Pages
-  namespace :website do
-    get 'pages/index'
-  end
+	# Website Pages
+	namespace :website do
+		get 'pages/index'
+	end
 
-  # Root Page for Testing
-  root :to => "website/pages#index"
+	# Root Page for Testing
+	root :to => "website/pages#index"
 
-  # Mount Engine
+	# Mount Engines
   mount PhcdevworksAccountsDevise::Engine => "/"
   
 end
