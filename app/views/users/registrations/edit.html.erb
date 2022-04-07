@@ -1,34 +1,34 @@
-<!-- -PHCDev- Title System -->
+<!-- -PHCDEV- Title System -->
 <% phc_title resource_name.to_s.humanize + " Account Information" %>
 <% phc_title_tagline "Edit Your " + resource_name.to_s.humanize + " Account Information" %>
 <% phc_breadcrumb_one link_to "Home", phcdevworks_accounts_devise.admin_users_all_path %>
 <% phc_breadcrumb_two link_to "Accounts Dashboard", phcdevworks_accounts_devise.user_path %>
 <% phc_breadcrumb_three yield(:phc_title_tagline) %>
-<!-- -PHCDev- Title System -->
+<!-- -PHCDEV- Title System -->
 
-<!-- -PHCDev- Page Bradcrumbs -->
+<!-- -PHCDEV- Bradcrumbs -->
 <ol class="breadcrumb float-xl-end">
 	<li class="breadcrumb-item"><%= yield(:phc_breadcrumb_one) %></li>
 	<li class="breadcrumb-item"><%= yield(:phc_breadcrumb_two) %></li>
 	<li class="breadcrumb-item active"><%= yield(:phc_breadcrumb_three) %></li>
 </ol>
-<!-- -PHCDev- Page Bradcrumbs -->
+<!-- -PHCDEV- Bradcrumbs -->
 
-<!-- -PHCDev- Page Header -->
+<!-- -PHCDEV- Header -->
 <h1 class="page-header"><%= yield(:phc_title) %></h1>
-<!-- -PHCDev- Page Header -->
+<!-- -PHCDEV- Header -->
 
 
-<!-- -PHCDev- Panel -->
+<!-- -PHCDEV- Panel -->
 <div class="panel panel-inverse">
 
-	<!-- -PHCDev- Panel - Heading -->
+	<!-- -PHCDEV- Panel - Heading -->
 	<div class="panel-heading">
 		<h4 class="panel-title"><%= yield(:phc_title) %></h4>
 	</div>
-	<!-- -PHCDev- Panel - Heading -->
+	<!-- -PHCDEV- Panel - Heading -->
 
-	<!-- -PHCDev- Panel - Body -->
+	<!-- -PHCDEV- Panel - Body -->
 	<div class="panel-body">
 
 		<!-- Edit Form -->
@@ -94,7 +94,7 @@
 		<% end %>
 
 	</div>
-	<!-- -PHCDev- Panel - Body -->
+	<!-- -PHCDEV- Panel - Body -->
 
 </div>
-<!-- -PHCDev- Panel -->
+<!-- -PHCDEV- Panel -->
