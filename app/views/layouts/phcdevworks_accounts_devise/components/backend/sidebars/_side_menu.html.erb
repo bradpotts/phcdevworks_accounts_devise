@@ -504,6 +504,128 @@
 		<% end %>
 		<!-- -PHCDEV- Page Container - Sidebar - Navigation - PHCDevworks Scripts -->
 
+		<!-- -PHCDEV- Page Container - Sidebar - Navigation - PHC Script CDN -->
+		<% if defined?phcscriptcdn %>
+			<div class="menu-header">Script CDN</div>
+			<div class="menu-item has-sub">
+				<a href="javascript:;" class="menu-link">
+					<div class="menu-icon"><i class="material-icons">code</i></div>
+					<div class="menu-text">Script CDN Listing</div>
+					<div class="menu-caret"></div>
+				</a>
+				<div class="menu-submenu">
+					<div class="menu-item has-sub">
+						<a href="javascript:;" class="menu-link">
+							<div class="menu-text">Script Listing</div>
+							<div class="menu-caret"></div>
+						</a>
+						<div class="menu-submenu <%= phc_menu_active_controller("phcscriptcdn/script/listings") %>">
+							<div class="menu-item <%= phc_menu_active_action_controller("phcscriptcdn/script/listings", "Index") %>">
+								<%= link_to phcscriptcdn.script_listings_path, class: "menu-link" do %>
+									<div class="menu-text">Script Listings</div>
+								<% end %>
+							</div>
+							<div class="menu-item <%= phc_menu_active_action_controller("phcscriptcdn/script/listings", "New") %>">
+								<%= link_to phcscriptcdn.new_script_listing_path, class: "menu-link" do %>
+									<div class="menu-text">Add a New Listing</div>
+								<% end %>
+							</div>
+						</div>
+					</div>
+					<div class="menu-item has-sub">
+						<a href="javascript:;" class="menu-link">
+							<div class="menu-text">Script Listing Extras</div>
+							<div class="menu-caret"></div>
+						</a>
+						<div class="menu-submenu <%= phc_menu_active_controller("phcscriptcdn/script/authors") %>">
+							<div class="menu-item <%= phc_menu_active_action_controller("phcscriptcdn/script/authors", "Index") %>">
+								<%= link_to phcscriptcdn.script_authors_path, class: "menu-link" do %>
+									<div class="menu-text">Script Authors</div>
+								<% end %>
+							</div>
+							<div class="menu-item <%= phc_menu_active_action_controller("phcscriptcdn/script/extensions", "Index") %>">
+								<%= link_to phcscriptcdn.script_extensions_path, class: "menu-link" do %>
+									<div class="menu-text">Script Extensions</div>
+								<% end %>
+							</div>
+							<div class="menu-item <%= phc_menu_active_action_controller("phcscriptcdn/script/licences", "Index") %>">
+								<%= link_to phcscriptcdn.script_licences_path, class: "menu-link" do %>
+									<div class="menu-text">Script Licences</div>
+								<% end %>
+							</div>
+							<div class="menu-item <%= phc_menu_active_action_controller("phcscriptcdn/script/versions", "Index") %>">
+								<%= link_to phcscriptcdn.script_versions_path, class: "menu-link" do %>
+									<div class="menu-text">Script Versions</div>
+								<% end %>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		<% end %>
+		<!-- -PHCDEV- Page Container - Sidebar - Navigation - PHC Script CDN -->
+
+		<!-- -PHCDEV- Page Container - Sidebar - Navigation - PHC Script CDN Pro -->
+		<% if defined?phcscriptcdnpro %>
+			<div class="menu-header">Script CDN</div>
+			<div class="menu-item has-sub">
+				<a href="javascript:;" class="menu-link">
+					<div class="menu-icon"><i class="material-icons">code</i></div>
+					<div class="menu-text">Script CDN Listing</div>
+					<div class="menu-caret"></div>
+				</a>
+				<div class="menu-submenu">
+					<div class="menu-item has-sub">
+						<a href="javascript:;" class="menu-link">
+							<div class="menu-text">Script Listing</div>
+							<div class="menu-caret"></div>
+						</a>
+						<div class="menu-submenu <%= phc_menu_active_controller("phcscriptcdnpro/script/listings") %>">
+							<div class="menu-item <%= phc_menu_active_action_controller("phcscriptcdnpro/script/listings", "Index") %>">
+								<%= link_to phcscriptcdnpro.script_listings_path, class: "menu-link" do %>
+									<div class="menu-text">Script Listings</div>
+								<% end %>
+							</div>
+							<div class="menu-item <%= phc_menu_active_action_controller("phcscriptcdnpro/script/listings", "New") %>">
+								<%= link_to phcscriptcdnpro.new_script_listing_path, class: "menu-link" do %>
+									<div class="menu-text">Add a New Listing</div>
+								<% end %>
+							</div>
+						</div>
+					</div>
+					<div class="menu-item has-sub">
+						<a href="javascript:;" class="menu-link">
+							<div class="menu-text">Script Listing Extras</div>
+							<div class="menu-caret"></div>
+						</a>
+						<div class="menu-submenu <%= phc_menu_active_controller("phcscriptcdnpro/script/authors") %>">
+							<div class="menu-item <%= phc_menu_active_action_controller("phcscriptcdnpro/script/authors", "Index") %>">
+								<%= link_to phcscriptcdnpro.script_authors_path, class: "menu-link" do %>
+									<div class="menu-text">Script Authors</div>
+								<% end %>
+							</div>
+							<div class="menu-item <%= phc_menu_active_action_controller("phcscriptcdnpro/script/extensions", "Index") %>">
+								<%= link_to phcscriptcdnpro.script_extensions_path, class: "menu-link" do %>
+									<div class="menu-text">Script Extensions</div>
+								<% end %>
+							</div>
+							<div class="menu-item <%= phc_menu_active_action_controller("phcscriptcdnpro/script/licences", "Index") %>">
+								<%= link_to phcscriptcdnpro.script_licences_path, class: "menu-link" do %>
+									<div class="menu-text">Script Licences</div>
+								<% end %>
+							</div>
+							<div class="menu-item <%= phc_menu_active_action_controller("phcscriptcdnpro/script/versions", "Index") %>">
+								<%= link_to phcscriptcdnpro.script_versions_path, class: "menu-link" do %>
+									<div class="menu-text">Script Versions</div>
+								<% end %>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		<% end %>
+		<!-- -PHCDEV- Page Container - Sidebar - Navigation - PHC Script CDN Pro -->
+
 		<!-- -PHCDEV- Page Container - Sidebar - Navigation - PHC Code Snipper -->
 		<% if defined?phccodesnipper %>
 			<div class="menu-header">Code Snippets</div>
